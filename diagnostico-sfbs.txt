@@ -1,55 +1,72 @@
-# DIAGNÓSTICO SFBS - PROJETO PEDRO ROCHA
+# DIAGNÓSTICO SFBS — PEDRO ROCHA
 
 ## 1. O QUE ENTENDEMOS
 
-**O PROJETO É:** Uma saga de formação filosófico-científica que combina aventura juvenil com questionamentos profundos sobre responsabilidade e poder. Pedro Rocha, aos 14 anos, herda o CoMEx (dispositivo de portais quânticos) e embarca numa jornada de autodescoberta guiada pelo enigmático Professor Ovídio Naso, que o ensina as "7 Leis do Universo".
+Este é um **universo filosófico-pedagógico** mascarado de ficção científica juvenil. Pedro Rocha herda aos 14 anos o CoMEx, um dispositivo de teletransporte quântico, mas a verdadeira herança é uma **pergunta civilizacional**: "O ser humano é digno do poder que possui?"
 
-**PERSONAGENS CENTRAIS:** Pedro Rocha (protagonista jovem em formação), Benito/"vovô Nito" (avô cientista, criador do CoMEx), Professor Ovídio Naso (mentor filosófico de presença magnética), além do círculo familiar (vovó Idália, Julie a vira-lata, Apolo o segurança).
+**Personagens identificados:**
+- **Pedro Rocha** (14 anos): protagonista, órfão de fato (pais ausentes), criado pelos avós
+- **Vovô Benito/Nito**: cientista criador do CoMEx, mentalmente doente, passando o bastão
+- **Vovó Idália**: matriarca afetiva, detentora da sabedoria doméstica
+- **Prof. Ovídio Naso**: mentor filosófico com "nariz geográfico", guardião das 7 Leis do Universo
+- **Karuna**: assistente tecnológica do laboratório
+- **Apolo**: segurança, guardião físico dos segredos
 
-**CONFLITO CENTRAL:** A pergunta existencial que permeia toda a saga: "O ser humano é digno do poder que possui?" — materializada no dilema de Pedro entre aprender a manejar ou destruir o CoMEx.
+**Conflito central:** Não é sobre o dispositivo, mas sobre **amadurecimento moral**. Pedro precisa provar-se digno de um poder que pode transformar civilizações.
 
-**TOM:** Contemplativo e aventuresco, com camadas de profundidade filosófica embutidas numa narrativa acessível ao público jovem. Combina o maravilhamento científico com intimidade emocional.
+**Tom:** Intimista e épico simultaneamente. Combina a descoberta pessoal de um adolescente com questões de escala histórica. O autor constrói um **bildungsroman tecnológico** onde cada capítulo é também uma lição de filosofia prática.
 
 ## 2. COBERTURA DOS 11 FRUTOS
 
-**✅ PERSONAGENS** - Pedro, Benito, Ovídio estão bem delineados com personalidades distintas
-**✅ MAGIA E TECNOLOGIA** - CoMEx detalhado como sistema de portais via satélites quânticos
-**⚠️ NARRATIVA E TRAMA** - Estrutura em 3 atos planejada, mas trama específica em desenvolvimento
-**⚠️ CULTURA** - Glimpses da vida familiar, mas contexto cultural mais amplo indefinido
-**⚠️ FATOS HISTÓRICOS** - Sugere-se um passado científico (laboratório de Benito), mas cronologia vaga
-**⚠️ LÍNGUA E CULTURA** - Esperanto mencionado, mas sem contexto linguístico expandido
-**❌ MAPA DO MUNDO** - Geografia completamente indefinida além de "Rio Paraná"
-**❌ SISTEMA POLÍTICO** - Nenhuma menção a estruturas governamentais
-**❌ ECONOMIA** - Sistema econômico não explorado
-**❌ SERES FANTÁSTICOS** - Apenas humanos identificados até agora
-**❌ MITOLOGIA** - Sem cosmogonia ou lendas estabelecidas
+**⚠️ Mapa do Mundo** — Parcial: Temos Brasil (casa dos avós) e Virginia (Prof. Ovídio). O CoMEx sugere escala global, mas falta mapeamento completo.
+
+**❌ Sistema Político** — Lacuna: Não sabemos como governos reagem ao CoMEx, se há controle estatal, agências de segurança.
+
+**❌ Fatos Históricos** — Lacuna: Quando foi criado o CoMEx? Que eventos o precederam? Como chegou ao Benito?
+
+**⚠️ Cultura** — Parcial: Cultura brasileira de classe média alta bem estabelecida. Falta cultura global e impacto do CoMEx na sociedade.
+
+**⚠️ Magia e Tecnologia** — Parcial: CoMEx bem definido (satélites quânticos, portais), laboratório subterrâneo. Faltam limites, custos, outros dispositivos.
+
+**❌ Seres Fantásticos** — Lacuna: Universo aparentemente realista, mas em 21 livros isso pode mudar.
+
+**❌ Economia** — Lacuna: Como se financia um laboratório quântico? Qual o impacto econômico do teletransporte?
+
+**⚠️ Língua e Cultura** — Parcial: Esperanto mencionado, sugerindo universalismo. Prof. Ovídio fala português? Como funciona comunicação global?
+
+**❌ Mitologia** — Lacuna: Quais são as 7 Leis do Universo? Há um sistema filosófico próprio sendo construído?
+
+**✅ Personagens** — Coberto: Elenco principal bem caracterizado, com arqueótipos claros e potencial de crescimento.
+
+**⚠️ Narrativa e Trama** — Parcial: Estrutura de 3 atos em 21 livros é ambiciosa, mas faltam marcos específicos da jornada.
 
 ## 3. O QUE É GRAU I (IMUTÁVEL)
 
-- **O CoMEx como tecnologia de portais quânticos** - a mecânica central já está estabelecida
-- **Pedro aos 14 anos herdando o dispositivo** - idade e momento de transição definidos
-- **As 7 Leis do Universo como sistema filosófico de aprendizado** - estrutura educativa core
-- **Professor Ovídio Naso como mentor** - seu caráter enigmático e método socrático
-- **A pergunta fundamental sobre dignidade humana vs. poder** - tema existencial central
-- **Estrutura em 21 livros/3 atos ao longo de décadas** - escopo temporal épico
-- **O laboratório subterrâneo de Benito** - espaço sagrado da tecnologia
+- **O CoMEx como teste moral, não apenas ferramenta** — O dispositivo existe para medir dignidade, não para facilitar aventuras
+- **Pedro aos 14 anos recebendo herança prematura** — A idade e circunstância da herança são fundamentais para o amadurecimento
+- **Prof. Ovídio como guardião das 7 Leis** — Há um sistema filosófico codificado que rege o universo
+- **Estrutura tri-partite da saga** — Conceitual → Dinâmico → Transformação civilizacional
+- **Pergunta central sobre dignidade humana** — Toda aventura deve ecoar este tema
+- **Ambientação multimídia planejada** — O universo nasceu pensando em expansão transmídia
 
 ## 4. AS TRÊS PERGUNTAS MAIS URGENTES
 
-1. **ONDE ESTAMOS?** Em que mundo/país/contexto geopolítico Pedro vive? O CoMEx funciona apenas na Terra ou acessa outras dimensões? Qual o alcance geográfico real da história?
+1. **Quais são exatamente as 7 Leis do Universo que Pedro deve aprender?** — Sem isso, não há currículo pedagógico claro nem progressão temática consistente ao longo de 21 livros.
 
-2. **QUEM MAIS SABE?** Existe uma comunidade científica, governo ou organização ciente do CoMEx? Benito trabalhou sozinho ou faz parte de algo maior? Há outros dispositivos similares?
+2. **Que outros CoMEx existem no mundo e quem os controla?** — Pedro não pode ser o único. A escala de poder exige outros portadores, antagonistas, organizações.
 
-3. **QUE PODER REAL PEDRO HERDOU?** Quais são exatamente as capacidades e limitações do CoMEx? Como isso se relaciona com as "7 Leis do Universo" que precisa aprender? Qual o verdadeiro escopo de sua responsabilidade?
+3. **Qual é o "teste final" que definirá se a humanidade é digna?** — O arco de 21 livros precisa de um destino claro. Que transformação civilizacional está em jogo?
 
 ## 5. CONVITE CRIATIVO
 
-**O FIO DE OURO:** A menção aparentemente casual ao mundo imaginário "Akvon" que Pedro e Benito criaram juntos - "um planeta azul diferente e, ao mesmo tempo, estranhamente parecido com aquele que habitamos."
+Há uma **tensão geracional fascinante** nos capítulos: Benito (criador, perdendo a mente), Ovídio (guardião, ensinando), Pedro (herdeiro, aprendendo). Três fases da relação com poder — conquista, sabedoria, responsabilidade.
 
-Isso sugere que o CoMEx pode não ser apenas um dispositivo de teletransporte terrestre, mas uma ponte entre mundos/dimensões. A história de formação de Pedro pode ser simultaneamente a descoberta de que seu próprio mundo imaginário da infância era, na verdade, um presságio de realidades paralelas acessíveis. O aprendizado das "7 Leis" pode ser sobre compreender as leis universais que governam múltiplas realidades.
+O momento mais revelador não é Pedro descobrindo o CoMEx, mas **olhando fotos antigas** no tablet. Ali vemos que sua verdadeira herança não é tecnológica — é afetiva. Ele precisa honrar memórias, não apenas manusear dispositivos.
 
-Esta conexão transforma a saga de "menino com tecnologia avançada" em "jovem guardião de portais interdimensionais" - elevando drasticamente as possibilidades narrativas e filosóficas para os próximos 20 livros.
+Sugiro que exploremos essa **arqueologia emocional** como método de worldbuilding. Cada "lembrança recuperada" pode revelar uma nova camada do universo, conectando o íntimo ao épico de forma orgânica.
+
+**Primeira sessão proposta:** Mapeamento das 7 Leis do Universo através das memórias que Pedro tem com cada mentor. Cada lei nasce de uma história pessoal, mas aponta para verdades civilizacionais.
 
 ---
 
-**GUILHERME:** Este material tem uma qualidade literária sólida e um potencial de universo extraordinário. A integração natural entre filosofia e aventura é rara e promissora. Estou particularmente intrigado pela relação Pedro-Ovídio e pelo mistério cuidadosamente construído em torno do verdadeiro alcance do CoMEx.
+*Este universo tem DNA raro: combina bildungsroman com filosofia aplicada, intimidade familiar com escala épica, tecnologia avançada com sabedoria ancestral. O potencial para 21 livros está justificado — há aqui matéria para décadas de exploração consciente.*
