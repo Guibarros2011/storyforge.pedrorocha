@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Roteiro de Apresentação · CoMEx / StoriaForge · FishJourney</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@100;300;400&display=swap');
+
+  :root {
+    --gold: #8B6914;
+    --ink: #0D0D0D;
+    --mid: #444;
+    --muted: #777;
+    --light: #F5F0E8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--ink);
+    background: white;
+    font-size: 11pt;
+    line-height: 1.7;
+  }
+
+  @media print {
+    .page-break { page-break-before: always; }
+    body { font-size: 10.5pt; }
+  }
+
+  /* ── CAPA ── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 100px;
+    border-bottom: 2px solid var(--gold);
+    position: relative;
+  }
+
+  .cover-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7.5pt;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .cover-title {
+    font-size: 52pt;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .cover-sub {
+    font-size: 18pt;
+    font-weight: 300;
+    color: var(--muted);
+    margin-bottom: 60px;
+  }
+
+  .cover-line {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 40px;
+  }
+
+  .cover-meta {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    line-height: 2;
+  }
+
+  .cover-quote {
+    margin-top: 80px;
+    padding-left: 24px;
+    border-left: 2px solid var(--gold);
+    max-width: 520px;
+  }
+
+  .cover-quote p {
+    font-size: 13pt;
+    font-style: italic;
+    color: var(--mid);
+  }
+
+  /* ── DOCUMENT BODY ── */
+  .doc {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+
+  .block {
+    padding: 60px 0;
+    border-bottom: 1px solid #E8E0D0;
+  }
+  .block:last-child { border-bottom: none; }
+
+  .block-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7pt;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .block-title {
+    font-size: 28pt;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.15;
+    margin-bottom: 32px;
+  }
+
+  hr.gold {
+    border: none;
+    border-top: 1px solid var(--gold);
+    margin: 20px 0 32px;
+    opacity: 0.5;
+  }
+
+  h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin: 36px 0 12px;
+  }
+
+  p { margin-bottom: 12px; }
+
+  p.muted { color: var(--muted); }
+  p.italic { font-style: italic; }
+
+  .pull-quote {
+    font-size: 20pt;
+    font-style: italic;
+    color: var(--gold);
+    text-align: center;
+    padding: 40px 60px;
+    border-top: 1px solid rgba(139,105,20,0.2);
+    border-bottom: 1px solid rgba(139,105,20,0.2);
+    margin: 36px 0;
+    line-height: 1.4;
+  }
+
+  blockquote {
+    border-left: 2px solid var(--gold);
+    padding: 12px 24px;
+    margin: 24px 0;
+    color: var(--mid);
+    font-style: italic;
+    font-size: 12pt;
+  }
+
+  blockquote cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7pt;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  ul.styled {
+    list-style: none;
+    margin: 16px 0;
+  }
+
+  ul.styled li {
+    padding: 8px 0 8px 24px;
+    border-bottom: 1px solid #F0E8D8;
+    position: relative;
+  }
+
+  ul.styled li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  ul.styled li.sub {
+    padding-left: 48px;
+    color: var(--muted);
+    font-size: 10pt;
+  }
+
+  ul.styled li.sub::before {
+    content: '◦';
+    left: 24px;
+  }
+
+  /* Tabela de métricas */
+  .metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+
+  .metrics-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #F0E8D8;
+    font-size: 10.5pt;
+  }
+
+  .metrics-table td:first-child {
+    color: var(--muted);
+    width: 55%;
+  }
+
+  .metrics-table td:last-child {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: var(--gold);
+    font-size: 11pt;
+  }
+
+  /* Timeline passos */
+  .phase-grid {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0;
+    margin: 24px 0;
+  }
+
+  .phase-num {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    padding-top: 4px;
+  }
+
+  .phase-content {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #F0E8D8;
+    margin-bottom: 24px;
+  }
+
+  .phase-content strong {
+    display: block;
+    font-size: 11pt;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .phase-content p {
+    color: var(--muted);
+    font-size: 10pt;
+    margin: 0;
+  }
+
+  /* Leis */
+  .law-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 24px 0;
+  }
+
+  .law-item {
+    border-top: 1px solid var(--gold);
+    padding-top: 16px;
+  }
+
+  .law-num {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .law-name {
+    font-size: 13pt;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+
+  .law-desc {
+    font-size: 9.5pt;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* Footer do doc */
+  .doc-footer {
+    text-align: center;
+    padding: 60px 40px;
+    border-top: 1px solid #E8E0D0;
+    color: var(--muted);
+  }
+
+  .doc-footer p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 7pt;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .closing-quote {
+    font-size: 18pt;
+    font-style: italic;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="cover">
+  <div class="cover-label">Projeto CoMEx · StoriaForge · Apresentação Estratégica</div>
+  <div class="cover-title">Roteiro de<br>Apresentação</div>
+  <div class="cover-sub">para os Sócios da FishJourney</div>
+  <div class="cover-line"></div>
+  <div class="cover-meta">
+    Natureza do encontro: Conversa estratégica sobre parceria na fundação da StoriaForge<br>
+    Duração sugerida: 45–60 minutos<br>
+    Formato: presencial ou videoconferência
+  </div>
+  <div class="cover-quote">
+    <p>"Histórias formam pessoas. Pessoas formam cultura. Cultura forma civilizações."</p>
+  </div>
+</div>
+
+<!-- DOCUMENTO -->
+<div class="doc">
+
+  <!-- ANTES DE COMEÇAR -->
+  <div class="block">
+    <div class="block-label">Antes de começar</div>
+    <div class="block-title">O que você precisa saber sobre este encontro</div>
+    <hr class="gold">
+
+    <p>Este não é um pitch de investimento. É um convite para construção conjunta.</p>
+    <p>Você não será apresentado a um produto pronto. Será convidado a participar do nascimento de algo com potencial de se tornar um movimento cultural duradouro — que começa, propositalmente, pequeno.</p>
+    <p>O projeto CoMEx existe na intersecção de três áreas que raramente se encontram com esta profundidade:</p>
+    <ul class="styled">
+      <li>Literatura formativa para jovens e adultos</li>
+      <li>Filosofia prática integrada à narrativa</li>
+      <li>Empreendedorismo como experimento pedagógico vivo</li>
+    </ul>
+    <p class="italic muted" style="margin-top: 20px;">A FishJourney é uma parceira natural porque já opera exatamente nessa fronteira — onde conteúdo, comunidade e impacto real se encontram.</p>
+
+    <blockquote>
+      "A literatura é o primeiro CoMEx da humanidade. Um livro permite conversar com mortos, visitar civilizações antigas, atravessar séculos em poucas páginas."
+      <cite>— Arq1 · Relatório Conceitual do Projeto CoMEx</cite>
+    </blockquote>
+  </div>
+
+  <!-- BLOCO 01 -->
+  <div class="block page-break">
+    <div class="block-label">Bloco 01 · 10 minutos</div>
+    <div class="block-title">O que é o CoMEx</div>
+    <hr class="gold">
+
+    <h3>Comece assim — leia isto em voz alta:</h3>
+    <blockquote>
+      "Pedro Rocha tem 14 anos quando herda do avô cientista um artefato capaz de abrir portais para qualquer ponto do planeta. O problema não é a tecnologia. O problema é que ninguém com tanto poder já estava pronto para tê-lo."
+    </blockquote>
+
+    <p>Essa é a premissa de <em>Pedro Rocha e o Poder do CoMEx</em> — Livro I de uma saga planejada em 21 volumes, escrita para jovens e adultos que acreditam que grandes histórias mudam a forma como as pessoas enxergam o mundo.</p>
+
+    <h3>Mas o CoMEx não é um livro de aventura comum.</h3>
+    <p>É uma metáfora estruturante sobre o maior desafio da humanidade: o descompasso entre poder e sabedoria.</p>
+    <p class="muted">Na superfície: um adolescente com um artefato extraordinário, viagens a Genebra, Dubai e Espanha, um bilionário suspeito chamado Noel Skum, hackers aliados, um filósofo de 82 anos com 50 mil livros.</p>
+    <p>Na profundidade: uma pergunta que não envelhece —</p>
+
+    <div class="pull-quote">O ser humano é digno do poder que possui?</div>
+
+    <h3>Os três atos da saga:</h3>
+    <ul class="styled">
+      <li><strong>Livro I — O Poder do CoMEx</strong><br>Formação filosófica. Quem sou? O que é virtude? Como o mal opera? <em>(Em edição final)</em></li>
+      <li><strong>Livro II — Os Arquitetos do Mundo</strong><br>Formação empreendedora. Como reunir aliados e construir algo real com o que se herdou?</li>
+      <li><strong>Livro III — O Julgamento da Escala</strong><br>Formação civilizacional. O que fazer quando o futuro da humanidade cabe nas suas mãos?</li>
+    </ul>
+  </div>
+
+  <!-- BLOCO 02 -->
+  <div class="block page-break">
+    <div class="block-label">Bloco 02 · 8 minutos</div>
+    <div class="block-title">O que o leitor aprende — sem perceber que está aprendendo</div>
+    <hr class="gold">
+
+    <p>Uma das grandes apostas do projeto: filosofia e empreendedorismo podem ser ensinados através de narrativa de qualidade — sem que o leitor sinta que está numa aula.</p>
+    <p>O Prof. Ovídio Naso — tutor de Pedro e um dos personagens centrais — apresenta ao longo dos capítulos as <strong>7 Leis do Universo</strong>. Não como um tratado. Como conversas, caminhadas em jardins, dilemas reais.</p>
+
+    <div class="law-grid">
+      <div class="law-item">
+        <div class="law-num">Lei I</div>
+        <div class="law-name">Unidade</div>
+        <p class="law-desc">Tudo está conectado. O CoMEx depende da rede de satélites da ElSky. A ElSky depende da confiança humana. Nenhum poder existe sozinho.</p>
+      </div>
+      <div class="law-item">
+        <div class="law-num">Lei II</div>
+        <div class="law-name">Dualidade</div>
+        <p class="law-desc">A biblioteca de Ovídio tem uma ala azul e uma vermelha. Uma representa verdades que libertam. A outra, ideias que mataram mais de 200 milhões de pessoas.</p>
+      </div>
+      <div class="law-item">
+        <div class="law-num">Lei III</div>
+        <div class="law-name">Trindade</div>
+        <p class="law-desc">Toda criação passa por três fases: conceito, dinamismo e forma. O CoMEx foi ideia antes de ser artefato.</p>
+      </div>
+      <div class="law-item">
+        <div class="law-num">Lei IV</div>
+        <div class="law-name">Filiação</div>
+        <p class="law-desc">Tudo deixa descendentes — inclusive ideias. Para entender o presente, é preciso rastrear a origem de cada pensamento.</p>
+      </div>
+      <div class="law-item">
+        <div class="law-num">Lei V</div>
+        <div class="law-name">Harmonia</div>
+        <p class="law-desc">Sabedoria é enxergar a ordem oculta antes que os outros a destruam.</p>
+      </div>
+      <div class="law-item">
+        <div class="law-num">Lei VI</div>
+        <div class="law-name">Ritmo</div>
+        <p class="law-desc">Pedro aprende que não pode acelerar aquilo para o qual a humanidade ainda não está pronta.</p>
+      </div>
+      <div class="law-item">
+        <div class="law-num">Lei VII</div>
+        <div class="law-name">Causa e Efeito</div>
+        <p class="law-desc">Cada ação reverbera. O CoMEx não é apenas um portal no espaço — é um portal de consequências.</p>
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top: 8px;">A cada lei o leitor encontra referências reais: Sêneca, Diógenes, Aristóteles, Jordan Peterson, Milton Friedman, as Leis de Clarke. Tudo integrado à trama, nunca como apêndice.</p>
+  </div>
+
+  <!-- BLOCO 03 -->
+  <div class="block page-break">
+    <div class="block-label">Bloco 03 · 10 minutos</div>
+    <div class="block-title">A StoriaForge e o modelo de negócio</div>
+    <hr class="gold">
+
+    <p>O CoMEx não é apenas uma obra literária. É um sistema cultural em quatro camadas que se reforçam mutuamente:</p>
+    <ul class="styled">
+      <li><strong>MITO</strong> → A saga. Cria imaginação e pertencimento.</li>
+      <li><strong>FORMAÇÃO</strong> → O método educacional. Desenvolve pensamento crítico e caráter.</li>
+      <li><strong>COMUNIDADE</strong> → Clubes de leitores-construtores. Gera pertencimento e receita recorrente.</li>
+      <li><strong>MOVIMENTO</strong> → Expansão cultural multiplataforma: podcast, games, audiovisual, material didático.</li>
+    </ul>
+
+    <h3>A StoriaForge é a plataforma que escala isso.</h3>
+    <p>Uma plataforma de leitura interativa onde o universo narrativo se torna um ecossistema vivo: desafios intelectuais por capítulo, comunidade participativa, criação colaborativa, progressão de níveis — Iniciados → Aprendizes → Guardiões → Arquitetos.</p>
+
+    <h3>O MVP — Fase 1: 100 Fundadores</h3>
+    <p>Simples, concreto e executável agora.</p>
+    <table class="metrics-table">
+      <tr><td>Meta de fundadores</td><td>100 pessoas</td></tr>
+      <tr><td>Ticket fundador</td><td>R$ 600 / ano</td></tr>
+      <tr><td>Receita Fase 1</td><td>R$ 60.000</td></tr>
+      <tr><td>Taxa de conversão necessária</td><td>10% de 1.000 visitantes</td></tr>
+      <tr><td>Horizonte da Fase 1</td><td>90 dias após lançamento</td></tr>
+    </table>
+
+    <h3>O que o fundador recebe:</h3>
+    <ul class="styled">
+      <li>Livro I completo + capítulos do Livro II em primeira mão</li>
+      <li>Acesso ao Clube de Fundadores com o autor</li>
+      <li>Guias filosóficos por capítulo</li>
+      <li>Desafios criativos mensais com feedback real</li>
+      <li>Nome nos agradecimentos da edição impressa</li>
+      <li>Acesso prioritário à plataforma StoriaForge</li>
+      <li>Participação nas decisões editoriais da saga</li>
+    </ul>
+  </div>
+
+  <!-- BLOCO 04 -->
+  <div class="block page-break">
+    <div class="block-label">Bloco 04 · 12 minutos</div>
+    <div class="block-title">Onde a FishJourney entra — e por quê faz sentido</div>
+    <hr class="gold">
+
+    <p>A FishJourney já faz algo que a maioria das empresas de conteúdo falha: conecta narrativa com transformação real. Vocês sabem que o formato importa tanto quanto o conteúdo, e que comunidade é o verdadeiro produto.</p>
+    <p>O projeto CoMEx precisa exatamente disso para sair do papel e chegar aos primeiros 100 fundadores — e crescer com consistência.</p>
+
+    <h3>O que estamos propondo: parceria de fundação da StoriaForge</h3>
+    <p>Estruturada em três frentes:</p>
+
+    <div class="phase-grid">
+      <div class="phase-num">Frente 01</div>
+      <div class="phase-content">
+        <strong>Produção e lançamento do Livro I</strong>
+        <p>Edição final, diagramação, capa, versão digital e piloto impresso. Estratégia de lançamento: landing page, tráfego, lista de espera, evento de abertura.</p>
+      </div>
+    </div>
+    <div class="phase-grid">
+      <div class="phase-num">Frente 02</div>
+      <div class="phase-content">
+        <strong>Comunidade e método</strong>
+        <p>Estruturação dos clubes piloto (presencial e online). Desenvolvimento dos guias filosóficos. Onboarding dos primeiros 100 fundadores.</p>
+      </div>
+    </div>
+    <div class="phase-grid">
+      <div class="phase-num">Frente 03</div>
+      <div class="phase-content">
+        <strong>Arquitetura da StoriaForge</strong>
+        <p>Definição do produto digital: funcionalidades, fluxo de usuário, posicionamento. Parceria na captação de recursos para desenvolvimento da plataforma.</p>
+      </div>
+    </div>
+
+    <h3>O que a FishJourney recebe:</h3>
+    <ul class="styled">
+      <li>Participação societária na StoriaForge <em>(a definir em negociação)</em></li>
+      <li>Co-crédito editorial e institucional desde o Livro I</li>
+      <li>Acesso preferencial ao universo para desenvolvimento de conteúdo derivado</li>
+      <li>Participação nos resultados de todas as fases do ecossistema</li>
+    </ul>
+
+    <blockquote>
+      "Quantas sementes tem numa maçã — mas quantas maçãs tem numa semente?"
+      <cite>— Manifesto CoMEx · Princípio de crescimento cultural</cite>
+    </blockquote>
+  </div>
+
+  <!-- BLOCO 05 -->
+  <div class="block page-break">
+    <div class="block-label">Bloco 05 · 5 minutos</div>
+    <div class="block-title">Próximos passos concretos</div>
+    <hr class="gold">
+
+    <p>Se a conversa de hoje gerar interesse genuíno de ambas as partes, propomos:</p>
+
+    <h3>Semana 1 — Alinhamento</h3>
+    <ul class="styled">
+      <li>Segunda reunião com capítulo de amostra, análise de mercado e modelo financeiro detalhado</li>
+      <li>Definição do escopo inicial de parceria e papéis</li>
+    </ul>
+
+    <h3>Semanas 2–3 — Estruturação</h3>
+    <ul class="styled">
+      <li>Acordo de parceria formalizado</li>
+      <li>Finalização editorial do Livro I</li>
+      <li>Configuração da landing page e estratégia de lançamento</li>
+    </ul>
+
+    <h3>Semana 4 — Lançamento</h3>
+    <ul class="styled">
+      <li>Abertura da lista de fundadores</li>
+      <li>Evento presencial piloto com primeiros convidados</li>
+      <li>Início do clube de leitura piloto</li>
+    </ul>
+
+    <p style="margin-top: 24px;">A meta é chegar ao fim do primeiro trimestre com <strong>100 fundadores ativos</strong>, o Livro I publicado e um modelo de comunidade funcionando que possa ser replicado para outras escolas e grupos.</p>
+  </div>
+
+  <!-- FECHAMENTO -->
+  <div class="block">
+    <div class="block-label">Fechamento</div>
+    <div class="block-title">Uma última coisa</div>
+    <hr class="gold">
+
+    <p>O CoMEx é uma metáfora sobre poder e sabedoria. Mas é também um experimento real: o projeto será construído de forma transparente, com os fundadores acompanhando cada decisão editorial, cada aprendizado, cada erro.</p>
+    <p>Isso não é apenas um livro que ensina empreendedorismo. É um empreendimento que se torna um livro — ao mesmo tempo.</p>
+
+    <blockquote>
+      "O portal mais importante não atravessa o espaço. Ele atravessa a própria condição humana."
+      <cite>— Arq1 · Relatório Conceitual do Projeto CoMEx</cite>
+    </blockquote>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  <div class="closing-quote">"Obrigado pela atenção e pelo tempo."</div>
+  <p>CoMEx / StoriaForge · Fundação · 2025</p>
+</div>
+
+</body>
+</html>
