@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StoryForge · Pedro Rocha e o Poder do CoMEx · Bem-vindo, Vilhelmo</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"><\/script>
+<title>StoryForge · Pedro Rocha · Bem-vindo, Guilherme</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=JetBrains+Mono:wght@300;400&display=swap');
 :root{--bg:#060e1c;--navy:#0a1628;--gold:#c9a84c;--gold-l:#e8c97a;--ice:#5ab4f0;--white:#f0ece4;--muted:#8a9bb5;--green:#2dd4bf;--red:#e74c3c;}
 *{margin:0;padding:0;box-sizing:border-box;}body{background:var(--bg);color:var(--white);font-family:'Cormorant Garamond',serif;}
 .w{max-width:760px;margin:0 auto;padding:0 24px 80px;}
 .hero{background:linear-gradient(165deg,#0d1f3c,#060e1c);padding:72px 56px 56px;border-bottom:1px solid rgba(201,168,76,.15);}
-.logo-row{display:flex;align-items:center;gap:12px;margin-bottom:44px;}
-.lm{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#0d1f3c,#1e3a5f);border:1px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:14px;font-weight:700;color:var(--gold);}
-.lt1{font-family:'Cinzel',serif;font-size:13px;font-weight:600;color:var(--white);letter-spacing:3px;text-transform:uppercase;}
-.lt2{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--ice);letter-spacing:3px;margin-top:3px;}
-.eyebrow{font-family:'Cinzel',serif;font-size:10px;font-weight:600;letter-spacing:4px;color:var(--ice);text-transform:uppercase;margin-bottom:12px;}
+.logo-row{display:flex;align-items:center;gap:14px;margin-bottom:44px;}
+.lm{font-family:'Cormorant Garamond',serif;font-size:1rem;display:flex;align-items:center;gap:4px;}
+.lm .storia{color:#b08830;font-style:italic;font-weight:500;}
+.lm .sep{color:rgba(176,136,48,.4);font-weight:300;margin:0 2px;}
+.lm .forge{color:#7aa3c8;font-weight:600;letter-spacing:.06em;}
+.lt1{font-family:'Cormorant Garamond',serif;font-size:0.9rem;font-weight:500;color:#ede8dc;letter-spacing:.12em;}
+.lt2{font-family:'DM Sans',sans-serif;font-size:9px;color:#7aa3c8;letter-spacing:2px;margin-top:3px;text-transform:uppercase;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-size:0.72rem;letter-spacing:.45em;color:#b08830;opacity:.85;text-transform:uppercase;margin-bottom:12px;}
 h1{font-family:'Cinzel',serif;font-size:clamp(28px,4vw,46px);font-weight:700;color:var(--white);letter-spacing:1px;margin-bottom:6px;}
 h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--gold-l);}
 .intro{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;line-height:1.75;color:rgba(240,236,228,.82);margin-top:22px;max-width:520px;}
@@ -84,47 +86,67 @@ h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;c
 .thnk span{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--ice);animation:pulse 1.2s infinite;margin-right:2px;}
 .thnk span:nth-child(2){animation-delay:.2s;}.thnk span:nth-child(3){animation-delay:.4s;}
 @keyframes pulse{0%,80%,100%{opacity:.2;transform:scale(.8);}40%{opacity:1;transform:scale(1);}}
-footer{background:#04090f;padding:22px 56px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-.fb2{font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:3px;color:rgba(255,255,255,.18);text-transform:uppercase;}
-.fm{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.12);text-align:right;line-height:1.7;}
+footer{background:rgba(15,37,53,.95);border-top:1px solid var(--gold-border);padding:20px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.fb2{font-family:'Cormorant Garamond',serif;font-size:0.85rem;color:var(--muted);}
+.fb2 .storia{color:var(--gold);font-style:italic;}
+.fb2 .forge{color:var(--forge-blue);}
+.fm{font-family:'DM Sans',sans-serif;font-size:9px;color:rgba(255,255,255,.18);text-align:right;line-height:1.7;letter-spacing:.5px;}
 </style>
 </head>
 <body>
 <div class="w">
 <div class="hero">
-  <div class="logo-row"><div class="lm">SF</div><div><div class="lt1">StoryForge</div><div class="lt2">Building System</div></div></div>
+  <div class="logo-row"><div class="lm"><span class="storia">Storia</span><span class="sep">/</span><span class="forge">Forge</span></div><div><div class="lt1">Building System</div><div class="lt2">SFBS · Método Canônico</div></div></div>
   <div class="eyebrow">✦ Carta de Boas-Vindas ✦</div>
-  <h1>Bem-vindo,<br><em>Vilhelmo</em></h1>
+  <h1>Bem-vindo,<br><em>Guilherme</em></h1>
   <p class="intro">Você está aqui porque tem uma história para contar — e nós temos o método para ajudá-la a ganhar forma, coerência e profundidade. O que está descrito aqui não é uma promessa de software. É um <strong>convite para construir</strong>.</p>
 </div>
- 
+
 <div class="sec">
   <div class="sec-label">O Projeto</div>
-  <div class="sec-title"><span class="a">Pedro Rocha e o Poder do CoMEx</span></div>
-  <p class="body">Pedro Rocha, 14 anos, herda o CoMEx — dispositivo de teletransporte quântico — do avô inventor Benito, que está morrendo. Ao atravessar portais dimensionais pela primeira vez, encontra o misterioso Professor Ovídio Naso e descobre que a herança recebida é muito maior do que imaginava.</p>
+  <div class="sec-title"><span class="a">Pedro Rocha</span></div>
+  <p class="body">Projeto
+Nome: Pedro Rocha e o Poder do CoMEx
+Tipo: Livro — ficção científica juvenil
+Estágio: 3 capítulos revisados pelo autor (Cap 1, 2 e 3 — março 2026)
+Premissa:
+Pedro Rocha, 14 anos, herda o CoMEx — um dispositivo de teletransporte quântico — do avô inventor Benito, que está morrendo. Ao atravessar portais dimensionais pela primeira vez, vai dos Estados Unidos ao encontro do misterioso Professor Ovídio Naso, e descobre que a herança recebida é muito maior do que imaginava.
+Tom:
+Bildungsroman científico com coração emocional forte. Combina wonder juvenil com profundidade filosófica, humor sutil e melancolia familiar. Linguagem acessível mas sofisticada, com camadas para diferentes idades.
+Conexão com Akvon:
+Uma menção no Capítulo 2 revela que Pedro e o avô Benito passavam tardes inventando histórias sobre "um planeta azul diferente e estranhamente parecido com o nosso" — chamado Akvon. O SFBS identificou isso como fio de ouro: o CoMEx pode não apenas transportar pelo espaço, mas entre realidades paralelas — e Akvon pode não ser invenção, mas destino.
+Estrutura transmídia:
+O projeto foi concebido desde o início com marcadores multimídia integrados ao texto (🎧 áudio, 🎬 vídeo, 📷 imagem, 🎮 interativo) — pensado para a plataforma StoryForge.
+O que é Grau I (imutável):
+
+O CoMEx como herança afetiva entre avô e neto
+Pedro tem 14 anos
+A doença do avô como catalisador emocional
+O caráter pedagógico orgânico — aprendizado que emerge da história, não didatismo
+O realismo emocional — mesmo com ficção científica, os sentimentos são genuínos</p>
   <div class="qb"><p>A IA não tem a visão — o autor tem.<br>A IA tem a memória e o método.<br>Juntos chegam onde nenhum dos dois chegaria sozinho.</p></div>
 </div>
- 
+
 <div class="sec sec-dark">
   <div class="sec-label">O Método</div>
   <div class="sec-title">O <span class="a">SFBS</span> — StoryForge Building System</div>
   <p class="body">O SFBS é o coração operacional do método. Ele organiza a construção do seu universo em <strong>11 dimensões</strong> — os Frutos da Árvore dos Mundos — sempre de dentro para fora: Cosmologia → Leis → Geografias → Personagens → Narrativa.</p>
   <p class="body">Ao trabalhar com o SFBS, você não está apenas usando uma IA para escrever. Você está construindo um <em>universo vivo</em> — com leis que governam o que é possível e uma memória canônica que preserva tudo que foi decidido.</p>
 </div>
- 
+
 <div class="upload-sec" id="upload">
   <div style="text-align:center;margin-bottom:36px;">
     <div class="eyebrow">✦ Sessão Inaugural ✦</div>
     <div class="sec-title" style="text-align:center;">Envie seus <span class="a">materiais</span></div>
-    <p class="body" style="text-align:center;max-width:460px;margin:0 auto;">Arraste tudo que existe sobre o Pedro Rocha e o Poder do CoMEx. O SFBS organiza no repositório e gera um diagnóstico completo.</p>
+    <p class="body" style="text-align:center;max-width:460px;margin:0 auto;">Arraste tudo que existe sobre o Pedro Rocha. O SFBS organiza no repositório e gera um diagnóstico completo.</p>
   </div>
- 
- 
- 
+
+
+
   <div class="uz" id="uz" ondrop="pDrop(event)" ondragover="pDragO(event)" ondragleave="pDragL(event)" onclick="document.getElementById('pfi').click()">
     <span class="uz-icon">📂</span>
     <div class="uz-title">Arraste os arquivos aqui</div>
-    <p class="uz-sub">Documentos, imagens, textos, referências —<br>tudo que existe sobre o Pedro Rocha e o Poder do CoMEx.</p>
+    <p class="uz-sub">Documentos, imagens, textos, referências —<br>tudo que existe sobre o Pedro Rocha.</p>
     <button class="uz-btn" onclick="event.stopPropagation();document.getElementById('pfi').click()">📎 Selecionar Arquivos</button>
     <input type="file" id="pfi" multiple style="display:none" onchange="pFiles(this.files)">
   </div>
@@ -135,11 +157,11 @@ footer{background:#04090f;padding:22px 56px;display:flex;justify-content:space-b
     <button class="sub-btn" id="sub-btn" onclick="pUpload()" disabled>⚓ Enviar ao Repositório & Gerar Diagnóstico</button>
     <p style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:8px;letter-spacing:.5px;">github.com/Guibarros2011/storyforge.pedrorocha</p>
   </div>
- 
+
   <div class="rw" id="rw">
     <div class="rdiv"><div class="rdl"></div><span class="rdt">✦ Diagnóstico SFBS ✦</span><div class="rdl r"></div></div>
     <div class="rc">
-      <div class="rc-title" id="rt">Analisando o universo de Pedro Rocha e o Poder do CoMEx…</div>
+      <div class="rc-title" id="rt">Analisando o universo de Pedro Rocha…</div>
       <div class="thnk" id="rthnk"><span></span><span></span><span></span>&nbsp; O SFBS está lendo os materiais enviados</div>
       <div class="rb" id="rb" style="display:none;"></div>
       <div class="fg" id="fg"></div>
@@ -147,8 +169,8 @@ footer{background:#04090f;padding:22px 56px;display:flex;justify-content:space-b
   </div>
 </div>
 </div>
-<footer><div class="fb2">StoryForge · FishJourney XR</div><div class="fm">SFBS · Pedro Rocha e o Poder do CoMEx · março de 2026</div></footer>
- 
+<footer><div class="fb2">StoryForge · FishJourney XR</div><div class="fm">SFBS · Pedro Rocha · abril de 2026</div></footer>
+
 <script>
 const GH_O='Guibarros2011',GH_R='storyforge.pedrorocha',GH_B='main';
 let pf2=[];
@@ -164,10 +186,10 @@ function fmtS(b){return b<1024?b+'B':b<1048576?(b/1024).toFixed(1)+'KB':(b/10485
 function ghFld(n){const e=n.split('.').pop().toLowerCase();return ['docx','doc','pdf','txt','md'].includes(e)?'documentos':['png','jpg','jpeg','gif','webp'].includes(e)?'imagens':'outros';}
 function renderFL(){const el=document.getElementById('fl');el.innerHTML='';pf2.forEach((f,i)=>{const d=document.createElement('div');d.className='fi';d.id='fi'+i;d.innerHTML='<span class="fi-icon">'+fi2(f.name)+'</span><span class="fi-name">'+f.name+'</span><span class="fi-st pending" id="fs'+i+'">pendente</span><button class="fi-rm" onclick="rmF('+i+')">×</button>';el.appendChild(d);});}
 function plog(m,t='i'){const el=document.getElementById('slog');el.style.display='block';const ts=new Date().toTimeString().slice(0,8);const d=document.createElement('div');d.className='ll';d.innerHTML='<span class="lt0">'+ts+'</span><span class="l'+t+'">'+m+'</span>';el.appendChild(d);el.scrollTop=el.scrollHeight;}
-async function exTxt(file){return new Promise(r=>{const ext=file.name.split('.').pop().toLowerCase();if(['txt','md'].includes(ext)){const rd=new FileReader();rd.onload=e=>r({name:file.name,text:e.target.result.slice(0,10000)});rd.readAsText(file);return;}if(['docx','doc'].includes(ext)){const rd=new FileReader();rd.onload=async e=>{try{const zip=await JSZip.loadAsync(e.target.result);const xml=await zip.file('word/document.xml').async('string');const tx=xml.replace(/<w:p[ >/]/g,'\\n').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/[ \\t]+/g,' ').replace(/\\n\\s*\\n\\s*\\n/g,'\\n\\n').trim().slice(0,10000);r({name:file.name,text:tx});}catch(e){r({name:file.name,text:'[Erro:'+e.message+']'});}};rd.readAsArrayBuffer(file);return;}r({name:file.name,text:'['+file.name+']'});});}
+async function exTxt(file){return new Promise(r=>{const ext=file.name.split('.').pop().toLowerCase();if(['txt','md'].includes(ext)){const rd=new FileReader();rd.onload=e=>r({name:file.name,text:e.target.result.slice(0,10000)});rd.readAsText(file);return;}if(['docx','doc'].includes(ext)){const rd=new FileReader();rd.onload=async e=>{try{const zip=await JSZip.loadAsync(e.target.result);const xml=await zip.file('word/document.xml').async('string');const tx=xml.replace(/<w:p[ >/]/g,'\n').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/[ \t]+/g,' ').replace(/\n\s*\n\s*\n/g,'\n\n').trim().slice(0,10000);r({name:file.name,text:tx});}catch(e){r({name:file.name,text:'[Erro:'+e.message+']'});}};rd.readAsArrayBuffer(file);return;}r({name:file.name,text:'['+file.name+']'});});}
 async function ghPut(path,content,token,msg){const b64=btoa(unescape(encodeURIComponent(content)));let sha=null;try{const res=await fetch('https://api.github.com/repos/'+GH_O+'/'+GH_R+'/contents/'+path,{headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}});if(res.ok)sha=(await res.json()).sha;}catch(_){}const body={message:msg,content:b64,branch:GH_B};if(sha)body.sha=sha;const res=await fetch('https://api.github.com/repos/'+GH_O+'/'+GH_R+'/contents/'+path,{method:'PUT',headers:{'Authorization':'token '+token,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},body:JSON.stringify(body)});if(!res.ok){const e=await res.json();throw new Error(e.message);}}
 async function ghPutBin(path,file,token){return new Promise((res,rej)=>{const rd=new FileReader();rd.onload=async e=>{try{const b64=e.target.result.split(',')[1];let sha=null;try{const r2=await fetch('https://api.github.com/repos/'+GH_O+'/'+GH_R+'/contents/'+path,{headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}});if(r2.ok)sha=(await r2.json()).sha;}catch(_){}const body={message:'SFBS: '+file.name,content:b64,branch:GH_B};if(sha)body.sha=sha;const r3=await fetch('https://api.github.com/repos/'+GH_O+'/'+GH_R+'/contents/'+path,{method:'PUT',headers:{'Authorization':'token '+token,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},body:JSON.stringify(body)});if(!r3.ok){const e=await r3.json();rej(new Error(e.message));}else res(await r3.json());}catch(e){rej(e);}};rd.onerror=()=>rej(new Error('Erro'));rd.readAsDataURL(file);});}
-function parseFrutos(t){return['Mapa do Mundo','Sistema Político','Fatos Históricos','Cultura','Magia e Tecnologia','Seres Fantásticos','Economia','Língua e Cultura','Mitologia','Personagens','Narrativa e Trama'].map(n=>{const ok=new RegExp('✅[^\\\\n]*'+n+'|'+n+'[^\\\\n]*✅','i').test(t);const par=new RegExp('⚠️[^\\\\n]*'+n+'|'+n+'[^\\\\n]*⚠️','i').test(t);return{name:n,status:ok?'covered':par?'partial':'missing'};});}
+function parseFrutos(t){return['Mapa do Mundo','Sistema Político','Fatos Históricos','Cultura','Magia e Tecnologia','Seres Fantásticos','Economia','Língua e Cultura','Mitologia','Personagens','Narrativa e Trama'].map(n=>{const ok=new RegExp('✅[^\\n]*'+n+'|'+n+'[^\\n]*✅','i').test(t);const par=new RegExp('⚠️[^\\n]*'+n+'|'+n+'[^\\n]*⚠️','i').test(t);return{name:n,status:ok?'covered':par?'partial':'missing'};});}
 function renderFrutos(frutos){const g=document.getElementById('fg');g.innerHTML='';frutos.forEach(f=>{const d=document.createElement('div');d.className='fb '+f.status;d.innerHTML='<div class="fb-dot"></div><span>'+f.name+'</span>';g.appendChild(d);});}
 async function pUpload(){
   if(pf2.length===0)return;
@@ -192,19 +214,19 @@ async function pUpload(){
   plog('Gerando diagnóstico SFBS…','i');
   const rw=document.getElementById('rw');rw.style.display='block';setTimeout(()=>rw.scrollIntoView({behavior:'smooth',block:'start'}),300);
   const extracted=[];for(const f of pf2)if(names.includes(f.name)){const ex=await exTxt(f);extracted.push(ex);}
-  const summary='ARQUIVOS ENVIADOS:\\n'+extracted.map(e=>'--- '+e.name+' ---\\n'+e.text).join('\\n\\n');
+  const summary='ARQUIVOS ENVIADOS:\n'+extracted.map(e=>'--- '+e.name+' ---\n'+e.text).join('\n\n');
   try{
     const resp=await fetch(WORKER+'/diagnose',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({files_content:summary,repo_slug:GH_R})});
     if(!resp.ok){const e=await resp.json();throw new Error(e.error||'HTTP '+resp.status);}
     const report=(await resp.json()).report;
-    document.getElementById('rthnk').style.display='none';document.getElementById('rt').textContent='Diagnóstico SFBS · Pedro Rocha e o Poder do CoMEx';
+    document.getElementById('rthnk').style.display='none';document.getElementById('rt').textContent='Diagnóstico SFBS · Pedro Rocha';
     const rb=document.getElementById('rb');rb.style.display='block';rb.textContent=report;
     renderFrutos(parseFrutos(report));
     plog('Diagnóstico gerado ✓','k');
-  }catch(e){plog('Erro diagnóstico: '+e.message,'e');document.getElementById('rthnk').style.display='none';document.getElementById('rt').textContent='Diagnóstico não disponível';document.getElementById('rb').style.display='block';document.getElementById('rb').textContent='Arquivos enviados ao GitHub com sucesso.\\nDiagnóstico será gerado na primeira sessão.\\n\\nErro: '+e.message;}
+  }catch(e){plog('Erro diagnóstico: '+e.message,'e');document.getElementById('rthnk').style.display='none';document.getElementById('rt').textContent='Diagnóstico não disponível';document.getElementById('rb').style.display='block';document.getElementById('rb').textContent='Arquivos enviados ao GitHub com sucesso.\nDiagnóstico será gerado na primeira sessão.\n\nErro: '+e.message;}
   btn.textContent='✓ Concluído';
 }
 document.addEventListener('DOMContentLoaded',()=>{});
-<\/script>
+</script>
 </body>
 </html>
