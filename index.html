@@ -48,7 +48,6 @@
       linear-gradient(180deg, #050510 0%, #0D0D1A 40%, #0D0A08 100%);
   }
 
-  /* Portal animado */
   .portal-ring {
     position: absolute;
     top: 50%;
@@ -60,27 +59,13 @@
     border: 1px solid rgba(200,169,110,0.12);
     animation: pulse-ring 4s ease-in-out infinite;
   }
-  .portal-ring:nth-child(2) {
-    width: 500px; height: 500px;
-    border-color: rgba(200,169,110,0.18);
-    animation-delay: 0.5s;
-  }
-  .portal-ring:nth-child(3) {
-    width: 400px; height: 400px;
-    border-color: rgba(200,169,110,0.25);
-    animation-delay: 1s;
-  }
-  .portal-ring:nth-child(4) {
-    width: 300px; height: 300px;
-    border-color: rgba(200,169,110,0.35);
-    animation-delay: 1.5s;
-  }
+  .portal-ring:nth-child(2) { width: 500px; height: 500px; border-color: rgba(200,169,110,0.18); animation-delay: 0.5s; }
+  .portal-ring:nth-child(3) { width: 400px; height: 400px; border-color: rgba(200,169,110,0.25); animation-delay: 1s; }
+  .portal-ring:nth-child(4) { width: 300px; height: 300px; border-color: rgba(200,169,110,0.35); animation-delay: 1.5s; }
   .portal-glow {
-    position: absolute;
-    top: 50%; left: 50%;
+    position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px; height: 200px;
-    border-radius: 50%;
+    width: 200px; height: 200px; border-radius: 50%;
     background: radial-gradient(circle, rgba(200,169,110,0.25) 0%, transparent 70%);
     animation: glow-breathe 3s ease-in-out infinite;
   }
@@ -94,605 +79,198 @@
     50% { opacity: 1; transform: translate(-50%,-50%) scale(1.15); }
   }
 
-  .hero-content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-    max-width: 800px;
-  }
+  .hero-content { position: relative; z-index: 10; text-align: center; max-width: 800px; }
 
   .hero-label {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 100;
-    font-size: 0.75rem;
-    letter-spacing: 0.35em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fade-up 1s ease forwards 0.3s;
+    font-family: 'Josefin Sans', sans-serif; font-weight: 100; font-size: 0.75rem;
+    letter-spacing: 0.35em; color: var(--gold); text-transform: uppercase;
+    margin-bottom: 2rem; opacity: 0; animation: fade-up 1s ease forwards 0.3s;
   }
-
   .hero-title {
-    font-size: clamp(3.5rem, 8vw, 7rem);
-    font-weight: 300;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fade-up 1s ease forwards 0.6s;
+    font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 300; line-height: 0.95;
+    letter-spacing: -0.02em; margin-bottom: 1.5rem; opacity: 0; animation: fade-up 1s ease forwards 0.6s;
   }
-
-  .hero-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
+  .hero-title em { font-style: italic; color: var(--gold); }
   .hero-subtitle {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 300;
-    line-height: 1.7;
-    color: rgba(245,240,232,0.7);
-    max-width: 560px;
-    margin: 0 auto 3rem;
-    opacity: 0;
-    animation: fade-up 1s ease forwards 0.9s;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 300; line-height: 1.7;
+    color: rgba(245,240,232,0.7); max-width: 560px; margin: 0 auto 3rem;
+    opacity: 0; animation: fade-up 1s ease forwards 0.9s;
   }
-
   .hero-cta {
-    opacity: 0;
-    animation: fade-up 1s ease forwards 1.2s;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    opacity: 0; animation: fade-up 1s ease forwards 1.2s;
+    display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
   }
 
   .btn-primary {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background: var(--gold);
-    color: var(--ink);
-    text-decoration: none;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    transition: all 0.3s;
+    display: inline-block; padding: 1rem 2.5rem; background: var(--gold); color: var(--ink);
+    text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-weight: 300;
+    font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s;
   }
-  .btn-primary:hover {
-    background: var(--gold-light);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(200,169,110,0.4);
-  }
-
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,169,110,0.4); }
   .btn-secondary {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    border: 1px solid rgba(200,169,110,0.4);
-    color: var(--gold);
-    text-decoration: none;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    transition: all 0.3s;
+    display: inline-block; padding: 1rem 2.5rem; border: 1px solid rgba(200,169,110,0.4);
+    color: var(--gold); text-decoration: none; font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s;
   }
-  .btn-secondary:hover {
-    border-color: var(--gold);
-    background: rgba(200,169,110,0.05);
-  }
+  .btn-secondary:hover { border-color: var(--gold); background: rgba(200,169,110,0.05); }
 
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
   .scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    opacity: 0;
-    animation: fade-up 1s ease forwards 2s;
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    opacity: 0; animation: fade-up 1s ease forwards 2s;
   }
   .scroll-line {
-    width: 1px;
-    height: 60px;
+    width: 1px; height: 60px;
     background: linear-gradient(to bottom, var(--gold), transparent);
     animation: scroll-line 2s ease-in-out infinite;
   }
-  @keyframes scroll-line {
-    0%, 100% { opacity: 0.4; transform: scaleY(1); transform-origin: top; }
-    50% { opacity: 1; }
-  }
+  @keyframes scroll-line { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
-  /* ── DIVIDER ── */
-  .divider {
-    width: 1px;
-    height: 80px;
-    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-    margin: 0 auto;
-  }
+  .divider { width: 1px; height: 80px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); margin: 0 auto; }
 
-  /* ── SECTION BASE ── */
-  section {
-    padding: 6rem 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+  section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
 
   .section-label {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 100;
-    font-size: 0.7rem;
-    letter-spacing: 0.4em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif; font-weight: 100; font-size: 0.7rem;
+    letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem;
   }
-
-  .section-title {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-  }
-
+  .section-title { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.2; margin-bottom: 2rem; }
   .section-title em { font-style: italic; color: var(--gold); }
+  .section-body { font-size: 1.15rem; line-height: 1.9; color: rgba(245,240,232,0.75); max-width: 680px; }
 
-  .section-body {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    color: rgba(245,240,232,0.75);
-    max-width: 680px;
-  }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .story-quote { border-left: 1px solid var(--gold); padding-left: 2rem; margin: 3rem 0; }
+  .story-quote p { font-size: 1.3rem; font-style: italic; font-weight: 300; line-height: 1.8; color: var(--gold-light); }
+  .story-quote cite { display: block; margin-top: 1rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; color: rgba(200,169,110,0.6); text-transform: uppercase; font-style: normal; }
 
-  /* ── A HISTÓRIA ── */
-  .story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
+  .book-cover-wrap { aspect-ratio: 3/4; position: relative; overflow: hidden; border: 1px solid rgba(200,169,110,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(200,169,110,0.08), inset 0 0 80px rgba(13,13,26,0.2); }
+  .book-cover-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 40%, rgba(0,0,0,0.2) 100%); pointer-events: none; }
+  .book-cover-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s ease; }
+  .book-cover-wrap:hover .book-cover-img { transform: scale(1.04); }
 
-  .story-quote {
-    border-left: 1px solid var(--gold);
-    padding-left: 2rem;
-    margin: 3rem 0;
-  }
+  .books-section { background: linear-gradient(180deg, var(--ink) 0%, #0A0A18 50%, var(--ink) 100%); padding: 6rem 2rem; }
+  .books-inner { max-width: 1100px; margin: 0 auto; }
+  .books-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 4rem; }
+  .book-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(200,169,110,0.1); padding: 3rem 2rem; position: relative; transition: all 0.4s; }
+  .book-card:hover { background: rgba(200,169,110,0.04); border-color: rgba(200,169,110,0.3); transform: translateY(-4px); }
+  .book-number { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: rgba(200,169,110,0.12); line-height: 1; margin-bottom: 1rem; font-style: italic; }
+  .book-act { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.75rem; }
+  .book-title { font-size: 1.4rem; font-weight: 400; margin-bottom: 1rem; line-height: 1.3; }
+  .book-desc { font-size: 0.95rem; line-height: 1.8; color: rgba(245,240,232,0.55); }
 
-  .story-quote p {
-    font-size: 1.3rem;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.8;
-    color: var(--gold-light);
-  }
+  .laws-section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .laws-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .law-item { padding: 2rem; border-top: 1px solid rgba(200,169,110,0.2); }
+  .law-num { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 0.75rem; }
+  .law-name { font-size: 1.3rem; font-weight: 400; font-style: italic; margin-bottom: 0.5rem; }
+  .law-desc { font-size: 0.9rem; color: rgba(245,240,232,0.5); line-height: 1.7; }
 
-  .story-quote cite {
-    display: block;
-    margin-top: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    color: rgba(200,169,110,0.6);
-    text-transform: uppercase;
-    font-style: normal;
-  }
+  .mvp-section { background: rgba(28,58,92,0.08); border-top: 1px solid rgba(200,169,110,0.1); border-bottom: 1px solid rgba(200,169,110,0.1); padding: 6rem 2rem; }
+  .mvp-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .mvp-steps { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; }
+  .mvp-step { display: flex; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(200,169,110,0.08); }
+  .step-num { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold); padding-top: 0.2rem; white-space: nowrap; }
+  .step-content strong { display: block; font-size: 1rem; font-weight: 400; margin-bottom: 0.3rem; }
+  .step-content p { font-size: 0.9rem; color: rgba(245,240,232,0.5); line-height: 1.7; }
+  .mvp-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(200,169,110,0.1); margin-top: 2.5rem; }
+  .metric { background: var(--ink); padding: 2rem; text-align: center; }
+  .metric-value { font-size: 2.5rem; font-weight: 300; color: var(--gold); display: block; font-style: italic; }
+  .metric-label { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; color: rgba(245,240,232,0.4); text-transform: uppercase; margin-top: 0.3rem; display: block; }
 
-  /* capa do livro */
-  .book-cover-wrap {
-    aspect-ratio: 3/4;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(200,169,110,0.3);
-    box-shadow:
-      0 30px 80px rgba(0,0,0,0.7),
-      0 0 0 1px rgba(200,169,110,0.08),
-      inset 0 0 80px rgba(13,13,26,0.2);
-  }
-  .book-cover-wrap::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(255,255,255,0.04) 0%,
-      transparent 40%,
-      rgba(0,0,0,0.2) 100%
-    );
-    pointer-events: none;
-  }
-  .book-cover-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.8s ease;
-  }
-  .book-cover-wrap:hover .book-cover-img {
-    transform: scale(1.04);
-  }
+  .characters-section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .chars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+  .char-card { padding: 2.5rem; border: 1px solid rgba(200,169,110,0.1); position: relative; }
+  .char-icon { width: 48px; height: 48px; border: 1px solid rgba(200,169,110,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--gold); }
+  .char-name { font-size: 1.4rem; font-weight: 400; font-style: italic; margin-bottom: 0.3rem; }
+  .char-role { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; }
+  .char-desc { font-size: 0.9rem; color: rgba(245,240,232,0.55); line-height: 1.8; }
 
-  /* ── FILOSOFIA / 3 LIVROS ── */
-  .books-section {
-    background: linear-gradient(180deg, var(--ink) 0%, #0A0A18 50%, var(--ink) 100%);
-    padding: 6rem 2rem;
-  }
-
-  .books-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .books-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    margin-top: 4rem;
-  }
-
-  .book-card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(200,169,110,0.1);
-    padding: 3rem 2rem;
-    position: relative;
-    transition: all 0.4s;
-  }
-  .book-card:hover {
-    background: rgba(200,169,110,0.04);
-    border-color: rgba(200,169,110,0.3);
-    transform: translateY(-4px);
-  }
-
-  .book-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 5rem;
-    font-weight: 300;
-    color: rgba(200,169,110,0.12);
-    line-height: 1;
-    margin-bottom: 1rem;
-    font-style: italic;
-  }
-
-  .book-act {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-  }
-
-  .book-title {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-
-  .book-desc {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: rgba(245,240,232,0.55);
-  }
-
-  /* ── LEIS ── */
-  .laws-section {
-    padding: 6rem 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .laws-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-
-  .law-item {
-    padding: 2rem;
-    border-top: 1px solid rgba(200,169,110,0.2);
-  }
-
-  .law-num {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    color: var(--gold);
-    margin-bottom: 0.75rem;
-  }
-
-  .law-name {
-    font-size: 1.3rem;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-  }
-
-  .law-desc {
-    font-size: 0.9rem;
-    color: rgba(245,240,232,0.5);
-    line-height: 1.7;
-  }
-
-  /* ── MVP / STORYFORGE ── */
-  .mvp-section {
-    background: rgba(28,58,92,0.08);
-    border-top: 1px solid rgba(200,169,110,0.1);
-    border-bottom: 1px solid rgba(200,169,110,0.1);
-    padding: 6rem 2rem;
-  }
-
-  .mvp-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-
-  .mvp-steps {
-    margin-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .mvp-step {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(200,169,110,0.08);
-  }
-
-  .step-num {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    padding-top: 0.2rem;
-    white-space: nowrap;
-  }
-
-  .step-content strong {
-    display: block;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 0.3rem;
-  }
-
-  .step-content p {
-    font-size: 0.9rem;
-    color: rgba(245,240,232,0.5);
-    line-height: 1.7;
-  }
-
-  .mvp-metrics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: rgba(200,169,110,0.1);
-    margin-top: 2.5rem;
-  }
-
-  .metric {
-    background: var(--ink);
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .metric-value {
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--gold);
-    display: block;
-    font-style: italic;
-  }
-
-  .metric-label {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: rgba(245,240,232,0.4);
-    text-transform: uppercase;
-    margin-top: 0.3rem;
-    display: block;
-  }
-
-  /* ── PERSONAGENS ── */
-  .characters-section {
-    padding: 6rem 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .chars-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .char-card {
-    padding: 2.5rem;
-    border: 1px solid rgba(200,169,110,0.1);
-    position: relative;
-  }
-
-  .char-icon {
-    width: 48px;
-    height: 48px;
-    border: 1px solid rgba(200,169,110,0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: var(--gold);
-  }
-
-  .char-name {
-    font-size: 1.4rem;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 0.3rem;
-  }
-
-  .char-role {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-
-  .char-desc {
-    font-size: 0.9rem;
-    color: rgba(245,240,232,0.55);
-    line-height: 1.8;
-  }
-
-  /* ── FUNDADORES ── */
-  .founders-section {
-    background: linear-gradient(135deg, #0A0F1E 0%, #0D0D0D 100%);
-    padding: 6rem 2rem;
-    text-align: center;
-    border-top: 1px solid rgba(200,169,110,0.15);
-  }
-
-  .founders-inner {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .founders-price {
-    font-size: 4rem;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--gold);
-    margin: 2rem 0 0.5rem;
-  }
-
-  .founders-period {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
-    color: rgba(245,240,232,0.4);
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
-  }
-
-  .founders-benefits {
-    list-style: none;
-    margin-bottom: 3rem;
-    text-align: left;
-    display: inline-block;
-  }
-
-  .founders-benefits li {
-    padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(200,169,110,0.08);
-    font-size: 1rem;
-    color: rgba(245,240,232,0.75);
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-
-  .founders-benefits li::before {
-    content: '→';
-    color: var(--gold);
-    flex-shrink: 0;
-  }
-
-  .counter-box {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(200,169,110,0.06);
-    border: 1px solid rgba(200,169,110,0.2);
-    padding: 0.75rem 1.5rem;
-    margin-bottom: 2.5rem;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    color: var(--gold);
-  }
-
-  .counter-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-    animation: blink 1.5s ease-in-out infinite;
-  }
+  .founders-section { background: linear-gradient(135deg, #0A0F1E 0%, #0D0D0D 100%); padding: 6rem 2rem; text-align: center; border-top: 1px solid rgba(200,169,110,0.15); }
+  .founders-inner { max-width: 700px; margin: 0 auto; }
+  .founders-price { font-size: 4rem; font-weight: 300; font-style: italic; color: var(--gold); margin: 2rem 0 0.5rem; }
+  .founders-period { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.3em; color: rgba(245,240,232,0.4); text-transform: uppercase; margin-bottom: 2.5rem; }
+  .founders-benefits { list-style: none; margin-bottom: 3rem; text-align: left; display: inline-block; }
+  .founders-benefits li { padding: 0.6rem 0; border-bottom: 1px solid rgba(200,169,110,0.08); font-size: 1rem; color: rgba(245,240,232,0.75); display: flex; gap: 1rem; align-items: flex-start; }
+  .founders-benefits li::before { content: '→'; color: var(--gold); flex-shrink: 0; }
+  .counter-box { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.2); padding: 0.75rem 1.5rem; margin-bottom: 2.5rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gold); }
+  .counter-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: blink 1.5s ease-in-out infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
 
-  /* ── FORM ── */
-  .form-group {
-    display: flex;
-    gap: 1rem;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  .form-input {
-    flex: 1;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(200,169,110,0.25);
-    color: var(--parchment);
-    padding: 1rem 1.25rem;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    outline: none;
-    transition: border-color 0.3s;
-  }
+  .form-group { display: flex; gap: 1rem; max-width: 480px; margin: 0 auto; }
+  .form-input { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(200,169,110,0.25); color: var(--parchment); padding: 1rem 1.25rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; outline: none; transition: border-color 0.3s; }
   .form-input::placeholder { color: rgba(245,240,232,0.3); }
   .form-input:focus { border-color: var(--gold); }
 
-  /* ── FOOTER ── */
-  footer {
-    padding: 3rem 2rem;
-    text-align: center;
-    border-top: 1px solid rgba(200,169,110,0.08);
-  }
+  /* ── APRESENTAÇÕES ── */
+  .pres-section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .pres-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+  .pres-card { cursor: pointer; background: rgba(255,255,255,0.02); border: 1px solid rgba(200,169,110,0.12); transition: border-color 0.3s, transform 0.3s; }
+  .pres-card:hover { border-color: rgba(200,169,110,0.4); transform: translateY(-4px); }
+  .pres-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+  .pres-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+  .pres-card:hover .pres-thumb img { transform: scale(1.04); }
+  .pres-overlay { position: absolute; inset: 0; background: rgba(13,13,13,0.55); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
+  .pres-card:hover .pres-overlay { opacity: 1; }
+  .pres-play { font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(200,169,110,0.5); padding: 0.6rem 1.4rem; }
+  .pres-count { position: absolute; bottom: 0.6rem; right: 0.75rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.15em; color: rgba(245,240,232,0.5); text-transform: uppercase; background: rgba(13,13,13,0.6); padding: 2px 8px; }
+  .pres-meta { padding: 1.25rem 1.5rem 1.5rem; }
+  .pres-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.8rem; font-weight: 400; letter-spacing: 0.1em; color: var(--parchment); text-transform: uppercase; margin-bottom: 0.6rem; }
+  .pres-desc { font-size: 0.9rem; line-height: 1.7; color: rgba(245,240,232,0.5); }
 
-  .footer-logo {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--gold);
-    margin-bottom: 1rem;
-  }
+  /* ── LIGHTBOX ── */
+  .pres-modal-bg { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(5,5,10,0.95); align-items: center; justify-content: center; padding: 1rem; }
+  .pres-modal-bg.open { display: flex; }
+  .pres-modal-box { position: relative; width: 100%; max-width: 1000px; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .modal-close { position: absolute; top: -2.5rem; right: 0; background: none; border: 1px solid rgba(200,169,110,0.3); color: var(--gold); font-size: 1rem; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .modal-close:hover { background: rgba(200,169,110,0.1); }
+  .modal-slide-wrap { position: relative; width: 100%; display: flex; align-items: center; gap: 0.5rem; }
+  .modal-slide-img { width: 100%; display: block; border: 1px solid rgba(200,169,110,0.15); max-height: 75vh; object-fit: contain; background: #000; }
+  .modal-nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(13,13,13,0.7); border: 1px solid rgba(200,169,110,0.25); color: var(--gold); font-size: 1.3rem; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; z-index: 2; flex-shrink: 0; }
+  .modal-nav-btn:hover { background: rgba(200,169,110,0.15); }
+  .modal-prev { left: -1.5rem; }
+  .modal-next { right: -1.5rem; }
+  .modal-footer { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+  .modal-counter { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; color: rgba(200,169,110,0.6); }
+  .modal-dots { display: flex; gap: 5px; flex-wrap: wrap; justify-content: center; }
+  .modal-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(200,169,110,0.25); cursor: pointer; transition: background 0.2s, transform 0.2s; }
+  .modal-dot.active { background: var(--gold); transform: scale(1.4); }
 
-  .footer-sub {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    color: rgba(245,240,232,0.25);
-    text-transform: uppercase;
-  }
+  /* ── VÍDEOS ── */
+  .videos-section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .video-card { display: flex; flex-direction: column; background: rgba(255,255,255,0.02); border: 1px solid rgba(200,169,110,0.12); overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+  .video-card:hover { border-color: rgba(200,169,110,0.35); transform: translateY(-3px); }
+  .video-wrap { position: relative; aspect-ratio: 16/9; background: #000; overflow: hidden; }
+  .video-player { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .video-meta { padding: 1.25rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+  .video-badge { font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); background: rgba(200,169,110,0.08); border: 1px solid rgba(200,169,110,0.2); padding: 2px 10px; display: inline-block; width: fit-content; }
+  .video-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.82rem; font-weight: 400; letter-spacing: 0.06em; color: var(--parchment); text-transform: uppercase; line-height: 1.4; }
+  .video-desc { font-size: 0.9rem; line-height: 1.75; color: rgba(245,240,232,0.5); }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    .story-grid,
-    .mvp-inner,
-    .chars-grid,
-    .books-grid { grid-template-columns: 1fr; }
-    .portal-ring { display: none; }
-    .form-group { flex-direction: column; }
-  }
+  /* ── RELATÓRIOS SFBS ── */
+  .sfbs-section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .sfbs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .sfbs-card { display: flex; flex-direction: column; gap: 1.25rem; padding: 2.5rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(200,169,110,0.15); text-decoration: none; color: inherit; transition: border-color 0.3s, background 0.3s, transform 0.3s; position: relative; overflow: hidden; }
+  .sfbs-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,169,110,0.5), transparent); transform: scaleX(0); transition: transform 0.4s ease; }
+  .sfbs-card:hover { border-color: rgba(200,169,110,0.4); background: rgba(200,169,110,0.03); transform: translateY(-4px); }
+  .sfbs-card:hover::before { transform: scaleX(1); }
+  .sfbs-badge { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(200,169,110,0.5); }
+  .sfbs-icon { width: 56px; height: 56px; border: 1px solid rgba(200,169,110,0.2); display: flex; align-items: center; justify-content: center; }
+  .sfbs-title { font-family: 'Josefin Sans', sans-serif; font-size: 1rem; font-weight: 400; letter-spacing: 0.05em; color: var(--parchment); text-transform: uppercase; }
+  .sfbs-desc { font-size: 1rem; line-height: 1.8; color: rgba(245,240,232,0.55); flex: 1; }
+  .sfbs-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .sfbs-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 10px; border: 1px solid rgba(200,169,110,0.2); color: rgba(200,169,110,0.6); }
+  .sfbs-link { font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; transition: gap 0.3s; }
+  .sfbs-card:hover .sfbs-link { gap: 1rem; }
+
+  footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(200,169,110,0.08); }
+  .footer-logo { font-size: 1.5rem; font-style: italic; color: var(--gold); margin-bottom: 1rem; }
+  .footer-sub { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.3em; color: rgba(245,240,232,0.25); text-transform: uppercase; }
+
+  @media (max-width: 900px) { .pres-grid { grid-template-columns: repeat(2,1fr); } .sfbs-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { .story-grid, .mvp-inner, .chars-grid, .books-grid, .videos-grid { grid-template-columns: 1fr; } .portal-ring { display: none; } .form-group { flex-direction: column; } .pres-grid { grid-template-columns: 1fr; } .modal-prev { left: 0; } .modal-next { right: 0; } }
 </style>
 </head>
 <body>
@@ -705,23 +283,16 @@
   <div class="portal-ring"></div>
   <div class="portal-ring"></div>
   <div class="portal-glow"></div>
-
   <div class="hero-content">
     <p class="hero-label">StoriaForge · Universo CoMEx · Livro I</p>
     <h1 class="hero-title">Pedro Rocha<br>e o <em>Poder do CoMEx</em></h1>
-    <p class="hero-subtitle">
-      Uma saga sobre o maior desafio da humanidade:<br>
-      ter poder e ter sabedoria para não destruir o que se cria.
-    </p>
+    <p class="hero-subtitle">Uma saga sobre o maior desafio da humanidade:<br>ter poder e ter sabedoria para não destruir o que se cria.</p>
     <div class="hero-cta">
       <a href="#fundadores" class="btn-primary">Ser Fundador</a>
       <a href="#historia" class="btn-secondary">Descobrir a História</a>
     </div>
   </div>
-
-  <div class="scroll-indicator">
-    <div class="scroll-line"></div>
-  </div>
+  <div class="scroll-indicator"><div class="scroll-line"></div></div>
 </section>
 
 <!-- A HISTÓRIA -->
@@ -730,16 +301,12 @@
   <div class="story-grid">
     <div>
       <h2 class="section-title">Um artefato que pode<br><em>mudar tudo</em></h2>
-      <p class="section-body">
-        Pedro Rocha tem 14 anos quando herda do avô cientista o CoMEx — um dispositivo capaz de abrir portais para qualquer ponto do planeta. Mas o poder do artefato é tão imenso quanto o perigo que carrega.
-      </p>
+      <p class="section-body">Pedro Rocha tem 14 anos quando herda do avô cientista o CoMEx — um dispositivo capaz de abrir portais para qualquer ponto do planeta. Mas o poder do artefato é tão imenso quanto o perigo que carrega.</p>
       <div class="story-quote">
         <p>"A humanidade não está pronta para lidar com tecnologias como essa, meu amigo. Tranque seu conhecimento em um cofre por mil anos até que a humanidade esteja pronta para ele."</p>
         <cite>— Benito Rocha, cientista e inventor do CoMEx</cite>
       </div>
-      <p class="section-body">
-        Para aprender a manejar ou destruir o artefato, Pedro precisará descobrir tudo sobre si mesmo, sobre o bem e o mal, e sobre como organizar o mundo para oferecer algo verdadeiramente útil à humanidade.
-      </p>
+      <p class="section-body">Para aprender a manejar ou destruir o artefato, Pedro precisará descobrir tudo sobre si mesmo, sobre o bem e o mal, e sobre como organizar o mundo para oferecer algo verdadeiramente útil à humanidade.</p>
     </div>
     <div class="book-cover-wrap">
       <img src="/imagens/capa.jpg" alt="Capa — Pedro Rocha e o Poder do CoMEx" class="book-cover-img">
@@ -754,7 +321,6 @@
   <div class="books-inner">
     <p class="section-label">A Saga em Três Atos</p>
     <h2 class="section-title" style="max-width:600px;">Uma jornada de <em>conhecimento,<br>ação e transformação</em></h2>
-
     <div class="books-grid">
       <div class="book-card">
         <div class="book-number">I</div>
@@ -782,45 +348,15 @@
 <div class="laws-section">
   <p class="section-label">Filosofia na Narrativa</p>
   <h2 class="section-title">As <em>7 Leis do Universo</em><br>que Pedro aprende</h2>
-  <p class="section-body" style="margin-bottom: 1rem;">
-    Cada lei emerge naturalmente na história — em diálogos, dilemas e aventuras. O leitor aprende filosofia sem perceber que está aprendendo.
-  </p>
+  <p class="section-body" style="margin-bottom: 1rem;">Cada lei emerge naturalmente na história — em diálogos, dilemas e aventuras. O leitor aprende filosofia sem perceber que está aprendendo.</p>
   <div class="laws-grid">
-    <div class="law-item">
-      <div class="law-num">Lei I</div>
-      <div class="law-name">Unidade</div>
-      <p class="law-desc">Tudo está conectado. O CoMEx depende da ElSky. A ElSky depende da humanidade. Nenhum poder existe sozinho.</p>
-    </div>
-    <div class="law-item">
-      <div class="law-num">Lei II</div>
-      <div class="law-name">Dualidade</div>
-      <p class="law-desc">Bem e mal. Liberdade e responsabilidade. A biblioteca de Ovídio tem uma seção vermelha e uma azul — e Pedro precisa conhecer as duas.</p>
-    </div>
-    <div class="law-item">
-      <div class="law-num">Lei III</div>
-      <div class="law-name">Trindade</div>
-      <p class="law-desc">Toda criação passa por três fases: conceito, dinamismo e forma. O CoMEx foi ideia antes de ser artefato.</p>
-    </div>
-    <div class="law-item">
-      <div class="law-num">Lei IV</div>
-      <div class="law-name">Filiação</div>
-      <p class="law-desc">Tudo deixa descendentes — inclusive ideias. Para entender o presente é preciso rastrear a origem de cada pensamento.</p>
-    </div>
-    <div class="law-item">
-      <div class="law-num">Lei V</div>
-      <div class="law-name">Harmonia</div>
-      <p class="law-desc">O caos aparente esconde uma ordem profunda. Sabedoria é enxergar essa ordem antes que os outros a destruam.</p>
-    </div>
-    <div class="law-item">
-      <div class="law-num">Lei VI</div>
-      <div class="law-name">Ritmo</div>
-      <p class="law-desc">Tudo tem seu tempo. Pedro aprende que não pode acelerar aquilo para o qual a humanidade ainda não está pronta.</p>
-    </div>
-    <div class="law-item">
-      <div class="law-num">Lei VII</div>
-      <div class="law-name">Causa e Efeito</div>
-      <p class="law-desc">Cada ação de Pedro reverbera. O CoMEx não é apenas um portal no espaço — é um portal de consequências.</p>
-    </div>
+    <div class="law-item"><div class="law-num">Lei I</div><div class="law-name">Unidade</div><p class="law-desc">Nós e o Pai somos um. O CoMEx revela que toda a criação é um organismo único — e Pedro aprende que qualquer poder exercido em separação do todo está fadado à destruição.</p></div>
+    <div class="law-item"><div class="law-num">Lei II</div><div class="law-name">Dualidade</div><p class="law-desc">Espírito e matéria, construção e destruição, ação e reação. As forças opostas da saga não são antagônicas — são complementares, e Pedro aprende a lidar com elas sem suprimir nenhuma.</p></div>
+    <div class="law-item"><div class="law-num">Lei III</div><div class="law-name">Trindade</div><p class="law-desc">Pensamento, ação e forma. Todo projeto tem sua fase conceitual, dinâmica e formal — e o CoMEx só poderá ser oferecido ao mundo quando Pedro respeitar cada uma dessas etapas.</p></div>
+    <div class="law-item"><div class="law-num">Lei IV</div><div class="law-name">Reprodução</div><p class="law-desc">Tudo multiplica e dá cria. As ideias de Benito geraram o CoMEx. O CoMEx gerará uma nova civilização. Pedro é o elo desta corrente reprodutiva que atravessa gerações.</p></div>
+    <div class="law-item"><div class="law-num">Lei V</div><div class="law-name">Diferenciação</div><p class="law-desc">Só Deus cria a perfeição de infinitas formas diferentes. Ovídio ensina, Benito inventa, Pedro lidera — cada um em sua natureza única. A sinfonia existe porque cada instrumento é diferente.</p></div>
+    <div class="law-item"><div class="law-num">Lei VI</div><div class="law-name">Nucleação e Coletivização</div><p class="law-desc">Como a semente de mostarda, o CoMEx começa pequeno e silencioso. Pedro aprende que todo centro irradiador ganha autoridade na medida em que se torna centro doador.</p></div>
+    <div class="law-item"><div class="law-num">Lei VII</div><div class="law-name">Hierarquização</div><p class="law-desc">O maior entre todos deve ser o maior servidor. Noel Skum acumula poder; Benito Rocha distribui sabedoria. Pedro aprende que a verdadeira hierarquia não comanda — serve.</p></div>
   </div>
 </div>
 
@@ -829,24 +365,146 @@
   <p class="section-label">Os Arquétipos</p>
   <h2 class="section-title">Personagens que <em>ensinam</em><br>sem parecer que ensinam</h2>
   <div class="chars-grid">
-    <div class="char-card">
-      <div class="char-icon">⬡</div>
-      <div class="char-name">Pedro Rocha</div>
-      <div class="char-role">O Herdeiro · O Aprendiz · O Fundador</div>
-      <p class="char-desc">14 anos, inteligência invulgar, caráter sólido. Herda não apenas uma tecnologia, mas uma missão institucional: criar uma estrutura humana capaz de lidar com poder sem sucumbir à corrupção.</p>
+    <div class="char-card"><div class="char-icon">⬡</div><div class="char-name">Pedro Rocha</div><div class="char-role">O Herdeiro · O Aprendiz · O Fundador</div><p class="char-desc">14 anos, inteligência invulgar, caráter sólido. Herda não apenas uma tecnologia, mas uma missão institucional: criar uma estrutura humana capaz de lidar com poder sem sucumbir à corrupção.</p></div>
+    <div class="char-card"><div class="char-icon">◇</div><div class="char-name">Benito Rocha</div><div class="char-role">O Guardião · O Cientista · O Avô</div><p class="char-desc">Inventor do CoMEx, 82 anos, em confronto com a própria mortalidade. Representa a tradição, a transmissão do conhecimento e a responsabilidade histórica de quem cria algo maior que si mesmo.</p></div>
+    <div class="char-card"><div class="char-icon">○</div><div class="char-name">Prof. Ovídio Naso</div><div class="char-role">O Sábio · O Tutor · O Filósofo</div><p class="char-desc">82 anos, 50 mil livros, uma biblioteca histórica na Virginia. É o Aristóteles de Pedro — e sabe disso. Sua missão é transformar um menino com poder em um homem com sabedoria.</p></div>
+  </div>
+</div>
+
+<div style="padding: 2rem 0;"><div class="divider"></div></div>
+
+<!-- APRESENTAÇÕES -->
+<div class="pres-section">
+  <p class="section-label">Material de Apresentação</p>
+  <h2 class="section-title" style="text-align:center;max-width:700px;margin:0 auto 1rem;">Três universos.<br><em>Um portal.</em></h2>
+  <p class="section-body" style="text-align:center;max-width:560px;margin:0 auto 3.5rem;">Explore os decks visuais que apresentam o universo CoMEx — do despertar da narrativa à filosofia profunda e ao mapa do universo expandido.</p>
+  <div class="pres-grid">
+    <div class="pres-card" onclick="openDeck('awakening')">
+      <div class="pres-thumb"><img src="/imagens/slides/awakening/slide01.jpg" alt="The CoMEx Awakening" loading="lazy"><div class="pres-overlay"><span class="pres-play">▶ Ver Slides</span></div><div class="pres-count">12 slides</div></div>
+      <div class="pres-meta"><div class="pres-title">The CoMEx Awakening</div><div class="pres-desc">O despertar — a história, o artefato e a missão de Pedro Rocha apresentados em linguagem visual imersiva.</div></div>
     </div>
-    <div class="char-card">
-      <div class="char-icon">◇</div>
-      <div class="char-name">Benito Rocha</div>
-      <div class="char-role">O Guardião · O Cientista · O Avô</div>
-      <p class="char-desc">Inventor do CoMEx, 82 anos, em confronto com a própria mortalidade. Representa a tradição, a transmissão do conhecimento e a responsabilidade histórica de quem cria algo maior que si mesmo.</p>
+    <div class="pres-card" onclick="openDeck('universe')">
+      <div class="pres-thumb"><img src="/imagens/slides/universe/slide01.jpg" alt="CoMEx Universe" loading="lazy"><div class="pres-overlay"><span class="pres-play">▶ Ver Slides</span></div><div class="pres-count">12 slides</div></div>
+      <div class="pres-meta"><div class="pres-title">CoMEx Universe</div><div class="pres-desc">O universo expandido — personagens, locações, leis e o mapa completo da saga de 21 volumes.</div></div>
     </div>
-    <div class="char-card">
-      <div class="char-icon">○</div>
-      <div class="char-name">Prof. Ovídio Naso</div>
-      <div class="char-role">O Sábio · O Tutor · O Filósofo</div>
-      <p class="char-desc">82 anos, 50 mil livros, uma biblioteca histórica na Virginia. É o Aristóteles de Pedro — e sabe disso. Sua missão é transformar um menino com poder em um homem com sabedoria.</p>
+    <div class="pres-card" onclick="openDeck('deep_education')">
+      <div class="pres-thumb"><img src="/imagens/slides/deep_education/slide01.jpg" alt="CoMEx Deep Education" loading="lazy"><div class="pres-overlay"><span class="pres-play">▶ Ver Slides</span></div><div class="pres-count">12 slides</div></div>
+      <div class="pres-meta"><div class="pres-title">CoMEx Deep Education</div><div class="pres-desc">A filosofia na prática — as 7 Leis do Universo e o método de formação por dentro da narrativa.</div></div>
     </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX MODAL -->
+<div id="pres-modal" class="pres-modal-bg" onclick="closeModal(event)">
+  <div class="pres-modal-box">
+    <button class="modal-close" onclick="closeDeck()">✕</button>
+    <div class="modal-slide-wrap">
+      <button class="modal-nav-btn modal-prev" onclick="shiftSlide(-1)">&#8592;</button>
+      <img id="modal-img" src="" alt="" class="modal-slide-img">
+      <button class="modal-nav-btn modal-next" onclick="shiftSlide(1)">&#8594;</button>
+    </div>
+    <div class="modal-footer">
+      <span id="modal-counter" class="modal-counter">1 / 12</span>
+      <div class="modal-dots" id="modal-dots"></div>
+    </div>
+  </div>
+</div>
+
+<div style="padding: 2rem 0;"><div class="divider"></div></div>
+
+<!-- VÍDEOS -->
+<div class="videos-section">
+  <p class="section-label">Apresentações em Vídeo</p>
+  <h2 class="section-title" style="text-align:center;max-width:700px;margin:0 auto 1rem;">O universo CoMEx<br><em>em movimento.</em></h2>
+  <p class="section-body" style="text-align:center;max-width:560px;margin:0 auto 3rem;">Vídeos de apresentação para diferentes públicos — leitores, pais, parceiros, escolas, educadores e investidores. Cada perspectiva revela uma camada diferente do projeto.</p>
+
+  <div class="videos-grid">
+
+    <div class="video-card">
+      <div class="video-wrap">
+        <video controls preload="none" poster="/imagens/slides/awakening/slide01.jpg" class="video-player">
+          <source src="https://pub-4d87d112e40e4572bd11dcfcf909db07.r2.dev/pedro-rocha/Pedro_Rocha_e_o_Poder_do_CoMEx.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-meta">
+        <div class="video-badge">Para Leitores</div>
+        <div class="video-title">Pedro Rocha e o Poder do CoMEx</div>
+        <p class="video-desc">A apresentação da obra, da história e do universo CoMEx para o leitor que está descobrindo a saga pela primeira vez.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrap">
+        <video controls preload="none" poster="/imagens/slides/universe/slide01.jpg" class="video-player">
+          <source src="https://pub-4d87d112e40e4572bd11dcfcf909db07.r2.dev/pedro-rocha/CoMEx__Um_Portal_para_o_Futuro.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-meta">
+        <div class="video-badge">Para Pais e Parceiros</div>
+        <div class="video-title">CoMEx — Um Portal para o Futuro</div>
+        <p class="video-desc">Visão estratégica do projeto CoMEx — modelo de negócio, ecossistema StoriaForge e oportunidades de parceria com pais que acreditam no potencial da obra.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <div class="video-wrap">
+        <video controls preload="none" poster="/imagens/slides/deep_education/slide01.jpg" class="video-player">
+          <source src="https://pub-4d87d112e40e4572bd11dcfcf909db07.r2.dev/pedro-rocha/CoMEx__Aventura_e_Educa%C3%A7%C3%A3o.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-meta">
+        <div class="video-badge">Para Escolas e Educadores</div>
+        <div class="video-title">CoMEx — Aventura e Educação</div>
+        <p class="video-desc">Como Pedro Rocha e o CoMEx se integram ao ambiente escolar — a proposta educacional para professores, coordenadores e instituições de ensino.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div style="padding: 2rem 0;"><div class="divider"></div></div>
+
+<!-- RELATÓRIOS SFBS -->
+<div class="sfbs-section">
+  <p class="section-label">Análise Literária · StoriaForge SFBS</p>
+  <h2 class="section-title" style="text-align:center;max-width:700px;margin:0 auto 1rem;">A obra sob o olhar<br><em>de cinco especialistas.</em></h2>
+  <p class="section-body" style="text-align:center;max-width:560px;margin:0 auto 3rem;">O sistema SFBS analisou os 21 capítulos de Pedro Rocha e gerou dois relatórios completos: um diagnóstico estrutural da obra e uma análise aprofundada por área de especialidade.</p>
+  <div class="sfbs-grid">
+    <a href="/diagnostico" target="_blank" class="sfbs-card">
+      <div class="sfbs-badge">Relatório 01</div>
+      <div class="sfbs-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect x="4" y="2" width="20" height="26" rx="1" stroke="#C8A96E" stroke-width="1.2"/>
+          <line x1="8" y1="9"  x2="20" y2="9"  stroke="#C8A96E" stroke-width="1" opacity=".6"/>
+          <line x1="8" y1="13" x2="20" y2="13" stroke="#C8A96E" stroke-width="1" opacity=".6"/>
+          <line x1="8" y1="17" x2="16" y2="17" stroke="#C8A96E" stroke-width="1" opacity=".6"/>
+          <circle cx="26" cy="26" r="5" fill="#0D0D0D" stroke="#C8A96E" stroke-width="1.2"/>
+          <path d="M23.5 26l1.5 1.5L28 24" stroke="#C8A96E" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="sfbs-title">Diagnóstico de Obra</div>
+      <p class="sfbs-desc">Resumo dos 21 capítulos, mapa de arcos narrativos, indicadores de qualidade e avaliação geral da estrutura do primeiro volume.</p>
+      <div class="sfbs-tags"><span class="sfbs-tag">21 Capítulos</span><span class="sfbs-tag">Arcos Narrativos</span><span class="sfbs-tag">Indicadores</span></div>
+      <div class="sfbs-link">Ver Diagnóstico <span>→</span></div>
+    </a>
+    <a href="/especialistas" target="_blank" class="sfbs-card">
+      <div class="sfbs-badge">Relatório 02</div>
+      <div class="sfbs-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="10" r="4" stroke="#C8A96E" stroke-width="1.2"/>
+          <circle cx="6"  cy="24" r="3" stroke="#C8A96E" stroke-width="1.2" opacity=".7"/>
+          <circle cx="16" cy="26" r="3" stroke="#C8A96E" stroke-width="1.2" opacity=".7"/>
+          <circle cx="26" cy="24" r="3" stroke="#C8A96E" stroke-width="1.2" opacity=".7"/>
+          <line x1="16" y1="14" x2="6"  y2="21" stroke="#C8A96E" stroke-width="1" opacity=".4"/>
+          <line x1="16" y1="14" x2="16" y2="23" stroke="#C8A96E" stroke-width="1" opacity=".4"/>
+          <line x1="16" y1="14" x2="26" y2="21" stroke="#C8A96E" stroke-width="1" opacity=".4"/>
+        </svg>
+      </div>
+      <div class="sfbs-title">Análise dos 5 Especialistas</div>
+      <p class="sfbs-desc">Perspectivas em paralelo: Analista Literário, Arquiteto de Mundos, Psicólogo de Personagens, Diretor Visual e Estrategista Editorial.</p>
+      <div class="sfbs-tags"><span class="sfbs-tag">Literário</span><span class="sfbs-tag">Mundos</span><span class="sfbs-tag">Personagens</span><span class="sfbs-tag">Visual</span><span class="sfbs-tag">Editorial</span></div>
+      <div class="sfbs-link">Ver Análise Especializada <span>→</span></div>
+    </a>
   </div>
 </div>
 
@@ -858,69 +516,26 @@
     <div>
       <p class="section-label">O Projeto · StoriaForge</p>
       <h2 class="section-title">Não é só um livro.<br><em>É um ecossistema.</em></h2>
-      <p class="section-body">
-        O CoMEx é um laboratório real de empreendedorismo e filosofia. Os leitores acompanham a construção do próprio projeto — desde a narrativa até a comunidade, desde o primeiro capítulo até a plataforma global.
-      </p>
+      <p class="section-body">O CoMEx é um laboratório real de empreendedorismo e filosofia. Os leitores acompanham a construção do próprio projeto — desde a narrativa até a comunidade, desde o primeiro capítulo até a plataforma global.</p>
       <div class="mvp-steps">
-        <div class="mvp-step">
-          <div class="step-num">Fase 01</div>
-          <div class="step-content">
-            <strong>Livro I + Clube Piloto</strong>
-            <p>Primeiros 100 fundadores. Leitura, reflexão filosófica e desafios criativos em grupos presenciais e online.</p>
-          </div>
-        </div>
-        <div class="mvp-step">
-          <div class="step-num">Fase 02</div>
-          <div class="step-content">
-            <strong>Comunidade CoMEx</strong>
-            <p>Expansão para escolas e famílias. Iniciados, Aprendizes, Guardiões e Arquitetos. Um clube de leitores-construtores.</p>
-          </div>
-        </div>
-        <div class="mvp-step">
-          <div class="step-num">Fase 03</div>
-          <div class="step-content">
-            <strong>Plataforma StoriaForge</strong>
-            <p>Leitura interativa, desafios intelectuais, criação colaborativa. A literatura que responde ao leitor.</p>
-          </div>
-        </div>
-        <div class="mvp-step">
-          <div class="step-num">Fase 04</div>
-          <div class="step-content">
-            <strong>Universo Multiplataforma</strong>
-            <p>Podcast, material didático, games, adaptação audiovisual. Vinte e um livros. Um movimento cultural.</p>
-          </div>
-        </div>
+        <div class="mvp-step"><div class="step-num">Fase 01</div><div class="step-content"><strong>Livro I + Clube Piloto</strong><p>Primeiros 100 fundadores. Leitura, reflexão filosófica e desafios criativos em grupos presenciais e online.</p></div></div>
+        <div class="mvp-step"><div class="step-num">Fase 02</div><div class="step-content"><strong>Comunidade CoMEx</strong><p>Expansão para escolas e famílias. Iniciados, Aprendizes, Guardiões e Arquitetos. Um clube de leitores-construtores.</p></div></div>
+        <div class="mvp-step"><div class="step-num">Fase 03</div><div class="step-content"><strong>Plataforma StoriaForge</strong><p>Leitura interativa, desafios intelectuais, criação colaborativa. A literatura que responde ao leitor.</p></div></div>
+        <div class="mvp-step"><div class="step-num">Fase 04</div><div class="step-content"><strong>Universo Multiplataforma</strong><p>Podcast, material didático, games, adaptação audiovisual. Vinte e um livros. Um movimento cultural.</p></div></div>
       </div>
     </div>
     <div>
       <p class="section-label" style="margin-top:0;">Métricas do MVP</p>
       <div class="mvp-metrics">
-        <div class="metric">
-          <span class="metric-value">100</span>
-          <span class="metric-label">Fundadores Meta</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">R$600</span>
-          <span class="metric-label">Ticket Anual</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">21</span>
-          <span class="metric-label">Livros Planejados</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">∞</span>
-          <span class="metric-label">Impacto Cultural</span>
-        </div>
+        <div class="metric"><span class="metric-value">100</span><span class="metric-label">Fundadores Meta</span></div>
+        <div class="metric"><span class="metric-value">R$600</span><span class="metric-label">Ticket Anual</span></div>
+        <div class="metric"><span class="metric-value">21</span><span class="metric-label">Livros Planejados</span></div>
+        <div class="metric"><span class="metric-value">∞</span><span class="metric-label">Impacto Cultural</span></div>
       </div>
-
       <div style="margin-top: 3rem; padding: 2.5rem; border: 1px solid rgba(200,169,110,0.15);">
         <p class="section-label" style="margin-bottom: 1rem;">O CoMEx como metáfora</p>
-        <p style="font-style: italic; font-size: 1.1rem; line-height: 1.8; color: rgba(245,240,232,0.7);">
-          "A literatura é o primeiro CoMEx da humanidade. Um livro permite conversar com mortos, visitar civilizações antigas, atravessar séculos em poucas páginas."
-        </p>
-        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(245,240,232,0.45); line-height: 1.7;">
-          O portal mais importante não atravessa o espaço. Ele atravessa a própria condição humana.
-        </p>
+        <p style="font-style: italic; font-size: 1.1rem; line-height: 1.8; color: rgba(245,240,232,0.7);">"A literatura é o primeiro CoMEx da humanidade. Um livro permite conversar com mortos, visitar civilizações antigas, atravessar séculos em poucas páginas."</p>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(245,240,232,0.45); line-height: 1.7;">O portal mais importante não atravessa o espaço. Ele atravessa a própria condição humana.</p>
       </div>
     </div>
   </div>
@@ -931,18 +546,10 @@
   <div class="founders-inner">
     <p class="section-label">Acesso Fundador</p>
     <h2 class="section-title"><em>Seja um dos primeiros</em><br>a atravessar o portal</h2>
-    <p class="section-body" style="margin: 1.5rem auto; max-width: 520px; text-align: center;">
-      Os fundadores constroem o projeto junto com o autor. Não são apenas leitores — são arquitetos de um movimento cultural.
-    </p>
-
-    <div class="counter-box">
-      <div class="counter-dot"></div>
-      <span>12 de 100 vagas preenchidas</span>
-    </div>
-
+    <p class="section-body" style="margin: 1.5rem auto; max-width: 520px; text-align: center;">Os fundadores constroem o projeto junto com o autor. Não são apenas leitores — são arquitetos de um movimento cultural.</p>
+    <div class="counter-box"><div class="counter-dot"></div><span>12 de 100 vagas preenchidas</span></div>
     <div class="founders-price">R$ 600</div>
     <div class="founders-period">por ano · acesso fundador vitalício</div>
-
     <ul class="founders-benefits">
       <li>Livro I completo + capítulos do Livro II em primeira mão</li>
       <li>Acesso ao Clube de Fundadores com o autor</li>
@@ -952,15 +559,11 @@
       <li>Acesso prioritário à plataforma StoriaForge</li>
       <li>Participação nas decisões editoriais da saga</li>
     </ul>
-
     <div class="form-group">
       <input type="email" class="form-input" placeholder="seu@email.com">
       <a href="#" class="btn-primary" style="white-space: nowrap;">Quero Entrar</a>
     </div>
-
-    <p style="margin-top: 1.5rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.15em; color: rgba(245,240,232,0.2); text-transform: uppercase;">
-      Projeto educacional sem fins publicitários · CoMEx / StoriaForge
-    </p>
+    <p style="margin-top: 1.5rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.15em; color: rgba(245,240,232,0.2); text-transform: uppercase;">Projeto educacional sem fins publicitários · CoMEx / StoriaForge</p>
   </div>
 </div>
 
@@ -970,5 +573,25 @@
   <p class="footer-sub">StoriaForge · Pedro Rocha e o Poder do CoMEx · Uma saga de 21 livros</p>
 </footer>
 
+<script>
+(function() {
+  const decks = {
+    awakening:     { total: 12, path: '/imagens/slides/awakening/slide',      label: 'The CoMEx Awakening' },
+    universe:      { total: 12, path: '/imagens/slides/universe/slide',       label: 'CoMEx Universe' },
+    deep_education:{ total: 12, path: '/imagens/slides/deep_education/slide', label: 'CoMEx Deep Education' }
+  };
+  let currentDeck = null, currentSlide = 1;
+  function pad(n) { return n.toString().padStart(2,'0'); }
+  window.openDeck = function(name) { currentDeck = name; currentSlide = 1; buildDots(); showSlide(1); document.getElementById('pres-modal').classList.add('open'); document.body.style.overflow = 'hidden'; };
+  window.closeDeck = function() { document.getElementById('pres-modal').classList.remove('open'); document.body.style.overflow = ''; document.getElementById('modal-img').src = ''; };
+  window.closeModal = function(e) { if (e && e.target === document.getElementById('pres-modal')) closeDeck(); };
+  window.shiftSlide = function(dir) { const deck = decks[currentDeck]; currentSlide = ((currentSlide - 1 + dir + deck.total) % deck.total) + 1; showSlide(currentSlide); };
+  function showSlide(n) { const deck = decks[currentDeck]; const img = document.getElementById('modal-img'); img.src = deck.path + pad(n) + '.jpg'; document.getElementById('modal-counter').textContent = n + ' / ' + deck.total; document.querySelectorAll('.modal-dot').forEach((d,i) => d.classList.toggle('active', i+1===n)); if (n < deck.total) new Image().src = deck.path + pad(n+1) + '.jpg'; }
+  function buildDots() { const deck = decks[currentDeck]; const container = document.getElementById('modal-dots'); container.innerHTML = ''; for (let i = 1; i <= deck.total; i++) { const d = document.createElement('span'); d.className = 'modal-dot' + (i===1?' active':''); d.dataset.slide = i; d.onclick = function() { currentSlide = +this.dataset.slide; showSlide(currentSlide); }; container.appendChild(d); } }
+  document.addEventListener('keydown', function(e) { const modal = document.getElementById('pres-modal'); if (!modal.classList.contains('open')) return; if (e.key === 'ArrowRight' || e.key === 'ArrowDown') shiftSlide(1); if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') shiftSlide(-1); if (e.key === 'Escape') closeDeck(); });
+})();
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"b21df6b4d7af4a9c950eb80ef5b48a80","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
